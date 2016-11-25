@@ -1,0 +1,5 @@
+set(CMAKE)
+set(SOURCE_FILES main.c)
+include_directories(${PROJECT_SOURCE_DIR}/lib)
+add_executable(ffmpegPlayer ${SOURCE_FILES})
+target_link_libraries(ffmpegPlayer player)

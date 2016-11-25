@@ -1,0 +1,10 @@
+set(player_src player.c player.h)
+
+if(FFMPEG_FOUND AND SDL2_FOUND)
+    message(STATUS "FOUND FFMPEG and SDL2 libraries")
+    include_directories(${FFMPEG_INCLUDE_DIR})
+    include_directories(${SDL2_INCLUDE_DIR})
+    add_library(player ${player_src})
+    target_link_libraries(player ${FFMPEG_LIBRARIES})
+    target_link_libraries(player ${SDL2_LIBRARIES})
+endif()
