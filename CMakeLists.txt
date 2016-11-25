@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.6)
+project(ffmpegPlayer)
+set(CMAKE_C_STANDARD 11)
+SET(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
+find_package(FFMPEG REQUIRED)
+find_package(SDL2 REQUIRED)
+add_subdirectory(lib)
+add_subdirectory(src)
